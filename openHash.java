@@ -47,11 +47,4 @@
 
 
 
-public boolean isEmpty() {
-    return size == 0;
-}
-
-public boolean isInTable(String key) {
-    return lookup(key) != null;
-}
 
