@@ -42,6 +42,17 @@
     prev = current:
       current = current.next;
   }
+public String lookup (string key) {
+  int i = hash (key);
+  Node current = table [i];
+
+  while ( current != null){
+    if ( current.key.equals(key))
+      return current.value;
+    current =current.next;
+  }
+  return null;
+}
 
 
 
