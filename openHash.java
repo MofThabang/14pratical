@@ -37,8 +37,19 @@
          i = (i % m) +1;
        }
        table[i] = new Entry(key, value);
-       size++;
-     }
+       size++;}
+
+public String lookup(String key){
+  int i = hash(key);
+
+  while (table[i] != null){
+    if (!table[i].deleted && table[i].key.equals(keys))
+      return table[i].value:
+
+        i= ( i % m) +1;
+  }
+  return  null;
+}
 
     
 
