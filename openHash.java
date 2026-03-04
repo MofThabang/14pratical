@@ -50,6 +50,34 @@ public String lookup(String key){
   }
   return  null;
 }
+public String lookup(String key) {
+    int i = hash(key);
+
+    while (table[i] != null) {
+        if (!table[i].deleted && table[i].key.equals(key))
+            return table[i].value;
+
+        i = (i % m) + 1;
+    }
+    return null;
+}
+    
+   public String remove(String key){
+     int i = hash(key);
+
+     while (table[i] != null){  
+       if( table[i].deleted && tabele[i].key.equals(key)){
+         tsble[i].deleted = true;
+         size--;
+         return table[i].value;
+       }
+       i = (i % m) +1;
+     }
+       
+
+  
+
+     
 
     
 
