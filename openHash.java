@@ -73,6 +73,17 @@ public String lookup(String key) {
        }
        i = (i % m) +1;
      }
+ public boolean isFull() {
+    return size == m;
+}
+
+public boolean isEmpty() {
+    return size == 0;
+}
+
+public boolean isInTable(String key) {
+    return lookup(key) != null;
+}
        
 
   
